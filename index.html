@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel = "stylesheet" href="four.css" rel = "stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
     <title> UK Medical School Admissions</title>
+    
 </head>
 <body class = "container">
 <!-- Navigtion(?)  --> 
 
 <!-- Title  --> 
-    <h1 class = "heading" >UK Medical School Selector</h1>
+    <h1 class = "heading" >UK Medical Schools</h1>
 
 <!-- Disclaimer  --> 
     <div id = "disclaimer">
@@ -34,11 +39,10 @@
         <form action = "" method = "POST" class = "info">
             <div id = "GCSEcore">
                 <h2>GCSE Grades</h2>
-                <br>
 <!-- Core  --> 
                 <div class = "GCSEgrid">
                     <div class = "box">
-                        <label class = "lab" for="English">English</label><br>
+                        <label class = "lab" for="English">English (Language)</label>
                         <input class = "subj" id = "English" name = "English" type = "number">
                     </div>
                     <div class = "box">
@@ -47,7 +51,7 @@
                     </div>
                     <div class = "box">
                         <label class = "lab" for="Double Science">Double Science</label>
-                        <input class = "subj" id = "Double Science" name = "Double Science" type = "number">
+                        <input class = "subj" id = "Double_Science" name = "Double Science" type = "number">
                     </div>
 <!-- Sciences Either single or double ?header needed -->
                     <div class = "box">
@@ -56,7 +60,7 @@
                     </div>
                     <div class = "box">
                         <label class = "lab" for="Chemistry">Chemistry</label><br>
-                        <input id = "Chemistry" name = "Chemistry" type = "number">
+                        <input id = "ChemGCSE" name = "Chemistry" type = "number">
                     </div>
                     <div class = "box">
                         <label class = "lab" for="Physics">Physics</label><br>
@@ -66,34 +70,81 @@
             </div>
             <!-- Non core  --> 
             <div id = "GCSEncore">
-                <h2>Other Subjects</h2>
-                <p>Please enter your best GCSE grades excluding Maths, English and Science</p>
-                <br>
-                <div class = "GCSEgrid">
-                    <div class = "box">
-                        <label class = "lab" for="Other1" >Subject 1</label><br>
-                        <input id = "Other1" name = "Other" type = "number">
-                    </div>
-                    <div class = "box">
-                        <label class = "lab" for="Other2">Subject 2</label><br>
-                        <input id = "Other2" name = "Other" type = "number">
-                    </div>
-                    <div class = "box">
-                        <label class = "lab" for="Other3">Subject 3</label><br>
-                        <input id = "Other3" name = "Other" type = "number">
-                    </div>
-                    <div class = "box">
-                        <label class = "lab" for="Other4">Subject 4</label><br>
-                        <input id = "Other4" name = "Other" type = "number">
-                    </div>
-                    <div class = "box">
-                        <label class = "lab" for="Other5">Subject 5</label><br>
-                        <input id = "Other5" name = "Other" type = "number">
-                    </div>
-                    <div class = "box">
-                        <label class = "lab" for="Other6">Subject 6</label><br>
-                        <input id = "Other6" name = "Other" type = "number">
-                    </div>
+                <h2>Overall Grades</h2>
+                <p>Please input your overall GCSE grades </p>
+                <div>
+                    <label for = "Grade9" >Grade 9</label>
+                    <select id = "Grade9" name = "Grade9" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
+                    <label for = "Grade8" >Grade 8</label>
+                    <select id = "Grade8" name = "Grade8" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
+                    <label for = "Grade7" >Grade 7</label>
+                    <select id = "Grade7" name = "Grade7" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
+                    <label for = "Grade6" >Grade 6</label>
+                    <select id = "Grade6" name = "Grade6" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
+                    <label for = "Grade5" >Grade 5</label>
+                    <select id = "Grade5" name = "Grade5" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
+                    <label for = "Grade4" >Grade 4</label>
+                    <select id = "Grade4" name = "Grade4" class= "select">
+                        <option value = "8">8 or More</option>
+                        <option value = "7">7</option>
+                        <option value = "6">6</option>
+                        <option value = "5">5</option>
+                        <option value = "4">4</option>
+                        <option value = "3">3</option>
+                        <option value = "2">2</option>
+                        <option value = "1">1</option>
+                        <option value = "0">0</option>
+                    </select>
                 </div>
             </div> 
 <!-- A Levels  --> 
@@ -103,29 +154,46 @@
                     <p> Do not include subjects only taken to AS Level</p>
                 </div>
                 <div>
-                    <label class = "checklab" for = "BiologyA">Biology</label>
-                    <input id= "BiologyA" name = "subject" value = "Biology" type = "checkbox" class = "alab">
+                    <label class = "checklab" for = "ChemistryA">Chemistry</label>
+                    <input id= "ChemistryA" name = "subject" value = "Chemistry" type = "checkbox" >
                 </div>
                 <div>
-                    <label class = "checklab" for = "ChemistryA">Chemistry</label>
-                    <input id= "ChemistryA" name = "subject" value = "Chemistry" type = "checkbox" class = "alab">
+                    <label class = "checklab" for = "BiologyA">Biology</label>
+                    <input id= "BiologyA" name = "subject" value = "Biology" type = "checkbox" >
                 </div>
                 <div>
                     <label class = "checklab" for = "MathsA">Maths</label>
-                    <input id= "MathsA" name = "subject" value = "Maths" type = "checkbox">
+                    <input id= "MathsA" name = "subject" value = "Maths" type = "checkbox" >
                 </div>
                 <div>
                     <label class = "checklab" for = "PhysicsA">Physics</label>
-                    <input id= "PhysicsA" name = "subject" value = "Physics" type = "checkbox">
+                    <input id= "PhysicsA" name = "subject" value = "Physics" type = "checkbox" >
                 </div>
                 <div>
                     <label class = "checklab" for = "Psychology">Psychology</label>
-                    <input id= "Psychology" name = "subject" value = "Psychology" type = "checkbox">
+                    <input id= "Psychology" name = "subject" value = "Psychology" type = "checkbox" >
+                </div>
+                <div>
+                    <label class = "checklab" for = "Economics">Economics</label>
+                    <input id= "Economics" name = "subject" value = "Economics" type = "checkbox" >
+                </div>
+                <div>
+                    <label class = "checklab" for = "CompSci">Computer Science</label>
+                    <input id= "CompSci" name = "subject" value = "CompSci" type = "checkbox" >
+                </div>
+                <div>
+                    <label class = "checklab" for = "FMaths">Further Maths</label>
+                    <input id= "FMaths" name = "subject" value = "FMaths" type = "checkbox" >
                 </div>
                 <div>
                     <label class = "checklab" for = "OtherA">Other (Excl. General Studies or Critical Thinking)</label>
                     <input id= "OtherA" name = "subject" value = "Other" type = "checkbox">
                 </div>
+                <div>
+                    <label class = "checklab" for = "OtherB">Other (Excl. General Studies or Critical Thinking)</label>
+                    <input id= "OtherB" name = "subject" value = "Other" type = "checkbox">
+                </div>
+    
             </div>    
 <!-- A Level Grades  --> 
             <div id = "AGrades">
@@ -134,16 +202,16 @@
                     <p> Include all your science subjects. </p>
                     <p>Do not include subjects only taken to AS Level</p>
                 </div>
-                <select id = "Agrad" name = "A Level Grades">
-                    <option value = "A*A*A*+">A*A*A* </option>
-                    <option value = "A*A*A">A*A*A</option>
-                    <option value = "A*AA">A*AA</option>
-                    <option value = "AAA">AAA</option>
-                    <option value = "AAB">AAB</option>
-                    <option value = "ABB">ABB</option>
-                    <option value = "BBB">BBB</option>
-                    <option value = "BBC">BBC</option>
-                    <option value = "BCC-">BCC or lower</option>
+                <select id = "Agrad" name = "A Level Grades" class= "select">
+                    <option value = "8">A*A*A* </option>
+                    <option value = "7">A*A*A</option>
+                    <option value = "6">A*AA</option>
+                    <option value = "5">AAA</option>
+                    <option value = "4">AAB</option>
+                    <option value = "3">ABB</option>
+                    <option value = "2">BBB</option>
+                    <option value = "1">BBC</option>
+                    <option value = "0">BCC or lower</option>
                 </select>
             </div>
 <!-- Admission Tests  --> 
@@ -154,33 +222,13 @@
                 </div>   
                 <div> 
                     <label class = "checklab" for = "UCAT">UCAT</label>
-                    <input id= "UCAT" name = "adtest" value = "UCAT" type = "checkbox">
+                    <input class= "test" name = "adtest" value = "UCAT" type = "checkbox">
                 </div>
                 <div>
                     <label class = "checklab" for = "BMAT">BMAT</label>
-                    <input id= "BMAT" name = "adtest" value = "BMAT" type = "checkbox">
+                    <input class= "test" name = "adtest" value = "BMAT" type = "checkbox">
                 </div>
-            </div>
-<!-- Interview Preference  --> 
-            <div id = "Interview">
-                <h2 class =  "float">Do you prefer any interview style?</h2>
-                <div> 
-                    <label class = "checklab" for = "MMI">MMI</label>
-                    <input id= "MMI" name = "interview" value = "MMI" type = "checkbox">
-                </div>
-                <div>
-                    <label class = "checklab" for = "Panel">Panel</label>
-                    <input id= "Panel" name = "interview" value = "Panel" type = "checkbox">
-                </div>
-                <div> 
-                    <label class = "checklab" for = "Day">Assessment Day</label>
-                    <input id= "Day" name = "interview" value = "Day" type = "checkbox">
-                </div>
-                <div>
-                    <label class = "checklab" for = "none">Don't mind</label>
-                    <input id= "none" name = "interview" value = "no preference" type = "checkbox">
-                </div>
-            </div>
+            </div>            
 
 <!-- Course Preference -->
             <div id = "Course">
@@ -188,13 +236,23 @@
                     <h2 class = "float">What kind of course would you prefer?</h2>
                 <!-- Hover elements  --> 
                     <div class="tooltip">[i]
-                        <span class="tooltiptext"> Additional info</span>
+                        <span class="tooltiptext"> <b>Traditional</b> <br> 
+                            Traditional medical courses have a clear divide between 'pre-clinical' years and 'clinical' years. 
+                            In the first two 'Pre-Clincial' years, students study basic sciences often in the form of lectures and laboratory practicals. 
+                            In the latter three 'Clinical' years, students undergo placments in different healthcare settings. <br> <br>
+                            <b>PBL</b> <br>
+                            Problem Based Learning (PBL) Courses are more self-directed in nature.
+                            Learning of topics is centred around a clinical case and individuals set their own learning objectives and teach each other about different aspects of the case in facilitated sessions. 
+                            <br> Different unversities vary in how much PBL is included in the course.  <br> <br>
+                            <b>Integrated</b> <br> Integrated Courses are somewhat of an amalgamation of traditional and PBL courses. 
+                            Most courses are 'systems-based' where individuals learn each bodily system in turn, covering all the different aspects of each system.
+                            These courses may feature both lectures as well and self-directed group work.  </span>
                     </div>
                 </div>
-                <select id = "courset" name = "course type">
+                <select id = "course" name = "course type" class= "select">
                     <option value = "PBL"> PBL</option>
                     <option value = "Integrated">Integrated</option>
-                    <option value = "Traditional">Tranditional</option>
+                    <option value = "Traditional">Traditional</option>
                     <option value = "Unsure">Not Sure</option>
                 </select>
             </div>
@@ -204,7 +262,13 @@
                     <h2 id = "WPT" class = "float">Do you meet any widening participation criteria?</h2>
                     <!-- Hover elements -->
                     <div class="tooltip">[i]
-                        <span class="tooltiptext"> Additional info</span>
+                        <span id = "tool2" class="tooltiptext"> Some universities have adjusted entry requirements or application processes for groups who are traditionally underepresented at University or in Medicine.
+                            These groups may include: 
+                            Individuals who attend a school where educational attainment is below average, Care Leavers, being the first member of your family to attend higher education, 
+                            being in reciept of free school meals and recieving the UCAT bursary. 
+                            The eligibility criteria and adjustment process for different universities vary so we recommend that you consult the admissions' criteria for each university.
+
+                        </span>
                     </div>
                 </div>
                 <div>
@@ -216,49 +280,448 @@
             </div>
 <!-- Submit button  --> 
             <div id = "submit">
-                <input type = "Submit">
+                <input type = "button" Value = "Submit">
             </div>
         </form>
     </div>
-
-<!-- Table Filter (?) --> 
-<!-- Table  --> 
-    <div id= "tab">
-        <table>
-           <!-- Headings  --> 
-            <thead>
-                <tr>
-                    <th scope = "col"> University</th>
-                    <th scope = "col"> Type of Course</th>
-                    <th scope = "col"> Standard GSCE Requirements</th>
-                    <th scope = "col"> Standard A Level Requirements</th>
-                    <th scope = "col"> Gateway GCSE requirements</th>
-                    <th scope = "col"> Gateway A-Level Requirements</th>
-                    <th scope = "col"> Admissions Test</th>
-                    <th scope = "col"> Widening Participation Programme?</th>
-                </tr>
-            </thead>
-            <!-- Fill your data here!  --> 
-            <tbody>
-                <tr>
-                    <th scope = "row"></th>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <br>
 
+<!-- Table  -->
+<div id= "tab">
+    <table id= "empTable" >
+       <!-- Headings  --> 
+        <thead>
+            <tr>
+                <th scope = "col"> University</th>
+                <th scope = "col" > Type of Course</th>
+                <th scope = "col"> Standard GSCE Requirements</th>
+                <th scope = "col"> Standard A Level Requirements</th>
+                <th class = 'gategcse' scope = "col"> Gateway GCSE requirements</th>
+                <th class = 'gatealevel' scope = "col"> Gateway A-Level Requirements</th>
+                <th scope = "col"> Admissions Test</th>
+                <th scope = "col"> Contextual Offers?</th>
+            </tr>
+        </thead>
+        <!-- Fill your data here!  --> 
+        <tbody id = "table_body"> 
+            <tr id= 'ARU' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "core" data-mathsgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100" data-numbest = "5"  data-bestgcse = "6"  >
+                <td>Anglia Ruskin University</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths, <br> 2x Sciences Grade 6, <br> 5 x Grade 6 </td>
+                <td class = 'tabalevel'>AAA (Chemistry OR Biology + another Science)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB) </td>
+            </tr>
+            <tr id = 'Buckingham' data-agrade = "45678" data-alevel = "both" data-mathsgcse = "0" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Buckingham</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'>n/a</td>
+                <td class = 'tabalevel'>AAB (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Cardiff' data-agrade = "5678" data-alevel = "both" data-mathsgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>Cardiff University</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 9 GCSEs</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Edge' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "66" data-doublescienceWP = "66" data-biologygcse = "6" data-biologygcseWP = "6" data-chemgcse = "6" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td>Edge Hill University</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths, 2x Sciences (OR Bio & Chem) Grade 6, <br> 5 x Grade 6 </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'> English Lang. Maths, Biology & Chemistry Grade 6, <br>5 x Grade 6</td>
+                <td class = 'gatealevel'>BBB</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'HYMS' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "6" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "0" data-biologygcse = "0" data-biologygcseWP = "0" data-chemgcse = "0" data-chemgcseWP = "0" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td>Hull York Medical School</td>
+                <td class = 'tabcourse'>PBL</td>
+                <td class = 'tabgcse'> English & Maths Grade 6, <br> 5 x Grade 4 </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>English Lang. & Maths Grade 4, <br> 5 x Grade 4</td>
+                <td class = 'gatealevel'>BBC (B in Biology and Chemistry)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Kent' data-agrade = "45678" data-wpagrade = "2345678" data-alevel = "kent" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100" >
+                <td>Kent & Medway Medical School</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Sciences Grade 6, <br> 5 x Grade 6 </td>
+                <td class = 'tabalevel'>AAB (Chemistry OR Biology + another science)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB-BBB)</td>
+            </tr>
+            <tr id = 'Kings' data-agrade = "678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "00" data-doublescienceWP = "00" data-biologygcse = "0" data-biologygcseWP = "0" data-chemgcse = "0" data-chemgcseWP = "0" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td>King's College London</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English & Maths Grade 6</td>
+                <td class = 'tabalevel'>A*AA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>English Lang. & Maths Grade 6</td>
+                <td class = 'gatealevel'>ABB (Grade A in  Biology or Chemistry)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Lincoln' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "7" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "7" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "7" data-physicsgcseWP = "6">
+                <td>Lincoln Medical School</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'>  English Grade 6, <br> 6 x Grade 7 incl. Maths and Sciences </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>English, Maths & Science Grade 6</td>
+                <td class = 'gatealevel'>BBC (Incl. Biology and Chemistry)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (AAB)</td>
+            </tr>
+            <tr id = 'QUB' data-agrade = "5678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "4" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>Queen's University Belfast</td>
+                <td class = 'tabcourse'>Traditional</td>
+                <td class = 'tabgcse'> English & Maths Grade 6, <br> 6 x Grade 4 </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and other Science)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Southampton' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "south" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "0" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "44" data-biologygcse = "0" data-biologygcseWP = "4" data-chemgcse = "0" data-chemgcseWP = "4" data-physicsgcse = "0" data-physicsgcseWP = "4">
+                <td>University of Southampton</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> Six Grade 7 </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other Science)</td>
+                <td class = 'gategcse'>English, Maths & Science Grade 4, <br> 5 x Grade 4</td>
+                <td class = 'gatealevel'>BBB(Incl. Chemistry and Biology)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            
+            <tr id = 'Lanc' data-agrade = "45678"  data-alevel = "chem" data-mathsgcse = "1" data-numbest = "5"  data-bestgcse = "" data-mathsgcse = "0" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Central Lancashire</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> <em>"Evidence of sustained academic achievement" </em></td>
+                <td class = 'tabalevel'>AAB (Incl. Chemistry and one other Science)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>None</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'UCL' data-agrade = "678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "" data-mathsgcseWP = "100" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University College London</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English & Maths Grade 6, <br> Modern Foreign Language Grade 4</td>
+                <td class = 'tabalevel'>A*AA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a </td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>Y <br> (AAB)</td>
+            </tr>
+            <tr id = 'Sunderland' data-agrade = "5678" data-wpagrade = "" data-alevel = "core" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Sunderland</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Sciences Grade 6, <br> 5 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other Science)</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Georges' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>St George's University of London</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Sciences Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology )</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Sheffield' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "either" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Sheffield</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & one science Grade 6, <br> 6 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science )</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'QMUL' data-agrade = "678" data-wpagrade = "" data-alevel = "either" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>Queen Mary University of London</td>
+                <td class = 'tabcourse'>PBL</td>
+                <td class = 'tabgcse'> 3 Subjects Grade 7,  <br> 3 subjects Grade 6 incl. English, Maths &  Science,</td>
+                <td class = 'tabalevel'>A*AA (Incl. Chemistry OR Biology and one other science )</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Plymouth' data-agrade = "678" data-wpagrade = "2345678" data-alevel = "plymouth" data-mathsgcse = "4" data-numbest = "7"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "4" data-englishgcseWP="4"  data-doublescience = "44" data-doublescienceWP = "4" data-biologygcse = "4" data-biologygcseWP = "4" data-chemgcse = "4" data-chemgcseWP = "4" data-physicsgcse = "4" data-physicsgcseWP = "4">
+                <td>Plymouth University</td>
+                <td class = 'tabcourse'>PBL</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 4</td>
+                <td class = 'tabalevel'>A*AA (Incl. Biology and one other science )</td>
+                <td class = 'gategcse'>4 Subjects Grade 4 incl. English, Maths & Science,</td>
+                <td class = 'gatealevel'>BBB (Incl. Biology and one other science )</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y</td>
+            </tr>
+            <tr id = 'StAndrews' data-agrade = "5678" data-wpagrade = "" data-alevel = "chem" data-mathsgcse = "5" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "5" data-englishgcseWP="100"  data-doublescience = "55" data-doublescienceWP = "100" data-biologygcse = "5" data-biologygcseWP = "100" data-chemgcse = "5" data-chemgcseWP = "100" data-physicsgcse = "5" data-physicsgcseWP = "100">
+                <td>University of St Andrews</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 5, <br> 5 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other science )</td>
+                <td class = 'gategcse'>If Biology, Maths or English not offered at Higher than must be offered at Nationals Grade B</td>
+                <td class = 'gatealevel'>BBBB (Scottish Highers )</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Oxford' data-agrade = "678" data-wpagrade = "" data-alevel = "oxford" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Oxford</td>
+                <td class = 'tabcourse'>Traditional</td>
+                <td class = 'tabgcse'>Number and proportion of 8/9 measured and compared to school performance</td>
+                <td class = 'tabalevel'>A*AA (Incl. Chemistry and one other science )</td>
+                <td class = 'gategcse'>n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Nottingham' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "7" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "6" data-physicsgcseWP = "6">
+                <td>University of Nottingham</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'>English & Maths OR Physics Grade 6, <br> Grade 7 in Science, <br> 6 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology)</td>
+                <td class = 'gategcse'> English, Maths & Sciences Grade 6</td>
+                <td class = 'gatealevel'>BBC (Incl. Chemistry and Biology)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (AAB)</td>
+            </tr>
+            <tr id = 'Newcastle' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "any" data-mathsgcse = "0" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Newcastle</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'>No requirements</td>
+                <td class = 'tabalevel'>AAA </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (BBB) </td>
+            </tr>
+            <tr id = 'Manchester' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "core" data-mathsgcse = "0" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Manchester</td>
+                <td class = 'tabcourse'>PBL</td>
+                <td class = 'tabgcse'>7 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'>n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Liverpool' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Liverpool</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 15 points based on university scoring criteria</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other science) OR A*AB (B in non-science) </td>
+                <td class = 'gategcse'> English, Maths & Science Grade 6</td>
+                <td class = 'gatealevel'> (Not for School Leavers) 2:1 Degree</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Leicester' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "either" data-mathsgcse = "6" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "5" data-mathsgcseWP = "5" data-englishgcse = "6" data-englishgcseWP="5"  data-doublescience = "66" data-doublescienceWP = "55" data-biologygcse = "6" data-biologygcseWP = "5" data-chemgcse = "6" data-chemgcseWP = "5" data-physicsgcse = "6" data-physicsgcseWP = "5">
+                <td>University of Leicester</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science) </td>
+                <td class = 'gategcse'> English, Maths & 2 Sciences (incl. Chemistry) Grade 5</td>
+                <td class = 'gatealevel'> BBB (Incl. Chemistry OR Biology and one other science)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Leeds' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "leeds" data-mathsgcse = "5" data-numbest = "6"  data-bestgcse = "5" data-mathsgcseWP = "4" data-englishgcse = "5" data-englishgcseWP="4"  data-doublescience = "55" data-doublescienceWP = "44" data-biologygcse = "5" data-biologygcseWP = "4" data-chemgcse = "5" data-chemgcseWP = "4" data-physicsgcse = "5" data-physicsgcseWP = "4">
+                <td>University of Leeds</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 5 </td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science incl Maths if no Chemistry A-Level) </td>
+                <td class = 'gategcse'> English, Maths & Science Grade 4</td>
+                <td class = 'gatealevel'> BBC (Incl. Chemistry OR Biology and one other science incl. Maths if no Chemistry A-Level)</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>Y <br> (ABB) </td>
+            </tr>
+            <tr id = 'Lancaster' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "lancaster" data-mathsgcse = "5" data-numbest = "6"  data-bestgcse = "5" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "66" data-doublescienceWP = "66" data-biologygcse = "6" data-biologygcseWP = "6" data-chemgcse = "6" data-chemgcseWP = "6" data-physicsgcse = "6" data-physicsgcseWP = "6">
+                <td>Lancaster University</td>
+                <td class = 'tabcourse'>PBL</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. 2 from Chemistry OR Biology OR Psychology) </td>
+                <td class = 'gategcse'> English, Maths & Science Grade 6</td>
+                <td class = 'gatealevel'> ABB (Incl. Chemistry and Biology)</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>Y <br> (ABB) </td>
+            </tr>
+            <tr id = 'Keele' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "keele" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "5" data-englishgcse = "6" data-englishgcseWP="5"  data-doublescience = "66" data-doublescienceWP = "55" data-biologygcse = "6" data-biologygcseWP = "5" data-chemgcse = "6" data-chemgcseWP = "5" data-physicsgcse = "6" data-physicsgcseWP = "5">
+                <td>Keele University</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 5 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science) </td>
+                <td class = 'gategcse'> English, Maths & Science Grade 5, <br> 5 x Grade 6</td>
+                <td class = 'gatealevel'> BBC (Incl. Chemistry OR Biology)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Imperial' data-agrade = "678" data-wpagrade = "5678" data-alevel = "both" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>Imperial College London</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English Grade 6</td>
+                <td class = 'tabalevel'>A*AA (Incl. Chemistry & Biology) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>Y <br> (AAA)</td>
+            </tr>
+            <tr id = 'Glasgow' data-agrade = "5678" data-wpagrade = "" data-alevel = "chem" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "5" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Glasgow</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry & one other Science) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> AABB (Scottish Highers) </td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Exeter' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "4" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "4" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "00" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Exeter</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English & Maths Grade 4</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry & Biology) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a </td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y  <br> (AAB) </td>
+            </tr>
+            <tr id = 'Edinburgh' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Edinburgh</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths, Biology & Chemistry Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry & one other science) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a </td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (AAB) </td>
+            </tr>
+            <tr id = 'UEA' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "either" data-mathsgcse = "7" data-numbest = "6"  data-bestgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "0" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "6">
+                <td>University of East Anglia</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English Grade 6, Maths & Chemistry Grade 7, <br> 6 x Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Biology OR Chemistry) </td>
+                <td class = 'gategcse'> English, Maths & Science Grade 6, <br> 6 x Grade 6</td>
+                <td class = 'gatealevel'> BBB OR ABC </td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Dundee' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "core" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "0" data-englishgcse = "6" data-englishgcseWP="0"  data-doublescience = "66" data-doublescienceWP = "0" data-biologygcse = "6" data-biologygcseWP = "0" data-chemgcse = "6" data-chemgcseWP = "0" data-physicsgcse = "6" data-physicsgcseWP = "0">
+                <td>University of Dundee</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other science) </td>
+                <td class = 'gategcse'> <em>Taken into account </em> </td>
+                <td class = 'gatealevel'> BBC (Incl. Chemistry and one other science) OR AAA (without 2 sciences or chemistry) </td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Cambridge' data-agrade = "78" data-wpagrade = "12345678" data-alevel = "core" data-mathsgcse = "0" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>University of Cambridge</td>
+                <td class = 'tabcourse'>Traditional</td>
+                <td class = 'tabgcse'> n/a</td>
+                <td class = 'tabalevel'>A*A*A (Incl. Chemistry and one other science) </td>
+                <td class = 'gategcse'> n/a </td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>N</td>
+            </tr>
+            <tr id = 'Bristol' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "chem" data-mathsgcse = "7" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "4" data-englishgcse = "4" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "66" data-biologygcse = "0" data-biologygcseWP = "6" data-chemgcse = "0" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "6">
+                <td>University of Bristol</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English Grade 4, Maths Grade 7</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other science) </td>
+                <td class = 'gategcse'> English & Maths Grade 4, Science Grade 6</td>
+                <td class = 'gatealevel'> BBC (B in Biology or Chemistry)</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB OR AAC)</td>
+            </tr>
+            <tr id = 'BSMS' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td>Brighton & Sussex Medical School</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English & Maths Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>BMAT</td>
+                <td class = 'tabWP'>Y <br> (AAB)</td>
+            </tr>
+            <tr id = 'Birmingham' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Birmingham</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and Biology) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (ABB)</td>
+            </tr>
+            <tr id = 'Aston' data-agrade = "45678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>Aston University</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English, Maths and Science Grade 6, <br> 5 x Grade 6</td>
+                <td class = 'tabalevel'>AAA - AAB (Incl. Chemistry and Biology) </td>
+                <td class = 'gategcse'> n/a</td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (AAA- AAB)</td>
+            </tr>
+            <tr id = 'Aberdeen' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td>University of Aberdeen</td>
+                <td class = 'tabcourse'>Integrated</td>
+                <td class = 'tabgcse'> English & Maths Grade 6 <br> <em>A Combination of Grades 6-9</em></td>
+                <td class = 'tabalevel'>AAA (Incl. Chemistry and one other science) </td>
+                <td class = 'gategcse'> English and Maths Grade B, <br> A Combination of A and B for other subjects (Scottish Nationals)</td>
+                <td class = 'gatealevel'> n/a</td>
+                <td class = 'tabtest'>UCAT</td>
+                <td class = 'tabWP'>Y <br> (AABB SQA)</td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+    <br> <br> <br>
+    <!--
+    <div id = "all">
+        <input type = "button" Value = "Display All">
+    </div>
+    -->
+</div>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p><b>Have you considered applying to a Gateway to Medicine Course?</b></p>
+      <p> Gateway to Medicine Courses are courses intended for individuals who do not meet the academic requirents for the standard medical course and who are part of groups which are traditionally under represented in Medicine .
+          These courses include an additional one-year course in before progression to the standard Medical course. 
+          The eligibility criteria for different universities vary so we recommend that you consult the admissions' criteria for each university.
+      </p>
+    </div>
+  
+</div>
+
+
 <!-- What next  --> 
+    
     <div id = "next">
         <p> We try to keep this information as accurate as possible but for the most accurate and up to date information,
         we advise you to verify all the information directly with university sources.</p>
@@ -266,6 +729,10 @@
 
         <p>All the best with your applications!</p>
     </div>
+
 </body>
+<footer>
+    <script src="index.js"></script>
+</footer>
 </html>
 
