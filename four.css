@@ -26,8 +26,9 @@
     padding-right: 10%;
 }
 
-#next {grid-area: next;
-    background-color: red;
+
+#next {
+    background-color: olive;
     color: white;
     padding-left: 10%;
     padding-right: 10%;
@@ -54,7 +55,7 @@
 
 .heading {
     grid-area: heading;
-    background-color: red;
+    background-color: lightblue;
     color: white;  
     text-align: center;  
     font-weight: 200;
@@ -80,15 +81,15 @@
 
 
 #GCSEcore { grid-area: GCSEcore;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;
     justify-items: center;
 }
 #GCSEncore { grid-area: GCSEncore;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -98,8 +99,8 @@
 
 #ALevels  { grid-area: ALevels;
     width: 100%;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -107,8 +108,8 @@
 
 #AGrades  { grid-area: AGrades;
     width: 100%;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -117,8 +118,8 @@
 }
 
 #WP { grid-area: WP;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;   
     justify-items: center; 
@@ -132,8 +133,8 @@
 }
 
 #AdmissionTests { grid-area: AdmissionTests;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     width: 100%;
     display: grid;
     align-items: center;
@@ -143,8 +144,8 @@
 }
 
 #Course { grid-area: Course;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     width: 100%;
     display: grid;
     align-items: center;   
@@ -153,8 +154,8 @@
 
 #Interview { grid-area: Interview;
     width: 100%;
-    border: 5px solid red;
-    box-shadow: 10px 10px red;
+    border: 5px solid olive;
+    box-shadow: 10px 10px olive;
     display: grid;
     align-items: center;   
     justify-items: center; 
@@ -236,7 +237,7 @@ label { display: inline;
 input[type="button"]:hover {background-color: lightgrey;
 }
 
-input[type="button"]{ background-color: red;
+input[type="button"]{ background-color: olive;
     color: white;
     letter-spacing: 1px;
     text-align: center;
@@ -287,7 +288,7 @@ input[type="button"]{ background-color: red;
     appearance: none;
     width: 20px; /* Set a specific slider handle width */
     height: 20px; /* Slider handle height */
-    background: red; /* Green background */
+    background: olive; /* Green background */
     cursor: pointer; /* Cursor on hover */
     border-radius: 8px;
   }
@@ -485,12 +486,12 @@ input[type=radio]:checked {
   }
   
   table.dataTable tr.odd td.sorting_1 {
-    background-color: red!important;
+    background-color: olive!important;
     color: white ;
   }
 
   table.dataTable tr.even td.sorting_1 {
-    background-color: red!important;
+    background-color: olive!important;
     color: white ;
   }
   
@@ -501,4 +502,10 @@ input[type=radio]:checked {
 
   }
 
- 
+td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+}
