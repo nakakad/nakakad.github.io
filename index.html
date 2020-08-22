@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
     <link rel = "stylesheet" href="four.css" rel = "stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
     <title> UK Medical School Admissions</title>
     
 </head>
@@ -39,7 +39,8 @@
             <div id = "GCSEcore">
                 <h2>GCSE Grades</h2>
                 <p> Please enter the grades for your core GCSE subjects</p> <br>
-                <p> <em>(For double science, enter both grades) </em></p>
+                <p> <em>For double science, enter both </em></p>
+                    
 <!-- Core  --> 
                 <div class = "GCSEgrid">
                     <div class = "box">
@@ -293,19 +294,25 @@
        <!-- Headings  --> 
         <thead>
             <tr>
-                <th scope = "col"> University</th>
-                <th scope = "col" > Type of Course</th>
-                <th scope = "col"> Standard GSCE Requirements</th>
-                <th scope = "col"> Standard A Level Requirements</th>
-                <th class = 'gategcse' scope = "col"> Gateway GCSE requirements</th>
-                <th class = 'gatealevel' scope = "col"> Gateway <br> A-Level Requirements</th>
-                <th scope = "col"> Admissions Test</th>
-                <th scope = "col"> Contextual Offers?</th>
+                <th scope = "col" ></th>
+                <th scope = "col"> <br> <br>University</th>
+                <th scope = "col" > <br> <br>Type of Course</th>
+                <th scope = "col"> <br> <br>Standard GSCE Requirements</th>
+                <th scope = "col">  <br> <br> Standard A Level Requirements</th>
+                <th class = 'gategcse' scope = "col"> <br> <br>Gateway GCSE requirements</th>
+                <th class = 'gatealevel' scope = "col"> <br> <br>Gateway A-Level Requirements</th>
+                <th scope = "col">   <br> <br>Admissions Test</th>
+                <th scope = "col"> <br> <br> Contextual Offers?</th>
+                <th scope = "col"> <br> <br> Link</th>
+                <th scope = "col"> <br> <br> Gateway</th>
+                
             </tr>
         </thead>
+        
         <!-- Fill your data here!  --> 
         <tbody id = "table_body"> 
             <tr id= 'ARU' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "core" data-mathsgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100" data-numbest = "5"  data-bestgcse = "6"  >
+                <td></td>
                 <td>Anglia Ruskin University</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths, <br> 2x Sciences Grade 6, <br> 5 x Grade 6 </td>
@@ -314,8 +321,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB) </td>
+                <td class = "link">  <a href="https://aru.ac.uk/study/undergraduate/medicine">https://aru.ac.uk/study/undergraduate/medicine</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Buckingham' data-agrade = "45678" data-alevel = "both" data-mathsgcse = "0" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Buckingham</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'>n/a</td>
@@ -324,8 +334,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.buckingham.ac.uk/medicine/undergrad/mbchb">https://www.buckingham.ac.uk/medicine/undergrad/mbchb</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Cardiff' data-agrade = "5678" data-alevel = "both" data-mathsgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Cardiff University</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 9 GCSEs</td>
@@ -334,8 +347,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.cardiff.ac.uk/study/undergraduate/courses/2020/medicine-mbbch">https://www.cardiff.ac.uk/study/undergraduate/courses/2020/medicine-mbbch</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Edge' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "66" data-doublescienceWP = "66" data-biologygcse = "6" data-biologygcseWP = "6" data-chemgcse = "6" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td></td>
                 <td>Edge Hill University</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths, 2x Sciences (OR Bio & Chem) Grade 6, <br> 5 x Grade 6 </td>
@@ -344,8 +360,11 @@
                 <td class = 'gatealevel'>BBB</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.edgehill.ac.uk/courses/medicine/">https://www.edgehill.ac.uk/courses/medicine/</a></td>
+                <td class = "link"><a href="https://www.edgehill.ac.uk/courses/medicine-with-foundation-year/">https://www.edgehill.ac.uk/courses/medicine-with-foundation-year/</a></td>
             </tr>
             <tr id = 'HYMS' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "6" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "0" data-biologygcse = "0" data-biologygcseWP = "0" data-chemgcse = "0" data-chemgcseWP = "0" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td></td>
                 <td>Hull York Medical School</td>
                 <td class = 'tabcourse'>PBL</td>
                 <td class = 'tabgcse'> English & Maths Grade 6, <br> 5 x Grade 4 </td>
@@ -354,8 +373,11 @@
                 <td class = 'gatealevel'>BBC (B in Biology and Chemistry)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.hyms.ac.uk/medicine">https://www.hyms.ac.uk/medicine</a></td>
+                <td class = "link"><a href="https://www.hyms.ac.uk/gateway-year">https://www.hyms.ac.uk/gateway-year</a></td>
             </tr>
             <tr id = 'Kent' data-agrade = "45678" data-wpagrade = "2345678" data-alevel = "kent" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100" >
+                <td></td>
                 <td>Kent & Medway Medical School</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Sciences Grade 6, <br> 5 x Grade 6 </td>
@@ -364,8 +386,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB-BBB)</td>
+                <td class = "link">  <a href="https://kmms.ac.uk">https://kmms.ac.uk</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Kings' data-agrade = "678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "00" data-doublescienceWP = "00" data-biologygcse = "0" data-biologygcseWP = "0" data-chemgcse = "0" data-chemgcseWP = "0" data-physicsgcse = "0" data-physicsgcseWP = "0">
+                <td></td>
                 <td>King's College London</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English & Maths Grade 6</td>
@@ -374,8 +399,11 @@
                 <td class = 'gatealevel'>ABB (Grade A in  Biology or Chemistry)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.kcl.ac.uk/study/undergraduate/courses/medicine-mbbs">https://www.kcl.ac.uk/study/undergraduate/courses/medicine-mbbs</a></td>
+                <td class = "link"><a href="https://www.kcl.ac.uk/study/undergraduate/courses/extended-medical-degree-programme-mbbs">https://www.kcl.ac.uk/study/undergraduate/courses/extended-medical-degree-programme-mbbs</a></td>
             </tr>
             <tr id = 'Lincoln' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "7" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "7" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "7" data-physicsgcseWP = "6">
+                <td></td>
                 <td>Lincoln Medical School</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'>  English Grade 6, <br> 6 x Grade 7 incl. Maths and Sciences </td>
@@ -384,8 +412,11 @@
                 <td class = 'gatealevel'>BBC (Incl. Biology and Chemistry)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (AAB)</td>
+                <td class = "link">  <a href="https://www.lincoln.ac.uk/home/medicalschool/">https://www.lincoln.ac.uk/home/medicalschool/</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'QUB' data-agrade = "5678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "4" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Queen's University Belfast</td>
                 <td class = 'tabcourse'>Traditional</td>
                 <td class = 'tabgcse'> English & Maths Grade 6, <br> 6 x Grade 4 </td>
@@ -394,8 +425,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.qub.ac.uk/courses/undergraduate/medicine-mb-a100/#entry">https://www.qub.ac.uk/courses/undergraduate/medicine-mb-a100/#entry</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Southampton' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "south" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "0" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "44" data-biologygcse = "0" data-biologygcseWP = "4" data-chemgcse = "0" data-chemgcseWP = "4" data-physicsgcse = "0" data-physicsgcseWP = "4">
+                <td></td>
                 <td>University of Southampton</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> Six Grade 7 </td>
@@ -404,9 +438,12 @@
                 <td class = 'gatealevel'>BBB(Incl. Chemistry and Biology)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.southampton.ac.uk/courses/medicine-bm5-degree-bmbs?tab-course=entry#main">https://www.southampton.ac.uk/courses/medicine-bm5-degree-bmbs?tab-course=entry#main</a></td>
+                <td class = "link"><a href="https://www.southampton.ac.uk/courses/medicine-bm6-widening-participation-degree-bmbs">https://www.southampton.ac.uk/courses/medicine-bm6-widening-participation-degree-bmbs</a></td>
             </tr>
             
             <tr id = 'Lanc' data-agrade = "45678"  data-alevel = "chem" data-mathsgcse = "1" data-numbest = "5"  data-bestgcse = "" data-mathsgcse = "0" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Central Lancashire</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> <em>"Evidence of sustained academic achievement" </em></td>
@@ -415,8 +452,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>None</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.uclan.ac.uk/courses/bachelor_medicine_bachelor_surgery.php">https://www.uclan.ac.uk/courses/bachelor_medicine_bachelor_surgery.php</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'UCL' data-agrade = "678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "" data-mathsgcseWP = "100" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University College London</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English & Maths Grade 6, <br> Modern Foreign Language Grade 4</td>
@@ -425,8 +465,11 @@
                 <td class = 'gatealevel'>n/a </td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>Y <br> (AAB)</td>
+                <td class = "link">  <a href="https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/medicine-mbbs-bsc/">https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/medicine-mbbs-bsc/</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Sunderland' data-agrade = "5678" data-wpagrade = "" data-alevel = "core" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Sunderland</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Sciences Grade 6, <br> 5 x Grade 7</td>
@@ -435,8 +478,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.sunderland.ac.uk/study/medicine/mbchb-medicine/#course-structure">https://www.sunderland.ac.uk/study/medicine/mbchb-medicine/#course-structure</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Georges' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>St George's University of London</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Sciences Grade 6</td>
@@ -445,18 +491,24 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.sgul.ac.uk/study/courses/medicine">https://www.sgul.ac.uk/study/courses/medicine</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Sheffield' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "either" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Sheffield</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & one science Grade 6, <br> 6 x Grade 7</td>
                 <td class = 'tabalevel'>AAA (Incl. Chemistry OR Biology and one other science )</td>
                 <td class = 'gategcse'>n/a</td>
-                <td class = 'gatealevel'>n/a)</td>
+                <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.sheffield.ac.uk/medicine/modules/mbchb-medicine-a100">https://www.sheffield.ac.uk/medicine/modules/mbchb-medicine-a100</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'QMUL' data-agrade = "678" data-wpagrade = "" data-alevel = "either" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Queen Mary University of London</td>
                 <td class = 'tabcourse'>PBL</td>
                 <td class = 'tabgcse'> 3 Subjects Grade 7,  <br> 3 subjects Grade 6 incl. English, Maths &  Science,</td>
@@ -465,8 +517,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2020/medicine-5-year-programme/">https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2020/medicine-5-year-programme/</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Plymouth' data-agrade = "678" data-wpagrade = "2345678" data-alevel = "plymouth" data-mathsgcse = "4" data-numbest = "7"  data-bestgcse = "4" data-mathsgcseWP = "4" data-englishgcse = "4" data-englishgcseWP="4"  data-doublescience = "44" data-doublescienceWP = "4" data-biologygcse = "4" data-biologygcseWP = "4" data-chemgcse = "4" data-chemgcseWP = "4" data-physicsgcse = "4" data-physicsgcseWP = "4">
+                <td></td>
                 <td>Plymouth University</td>
                 <td class = 'tabcourse'>PBL</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 4</td>
@@ -475,8 +530,11 @@
                 <td class = 'gatealevel'>BBB (Incl. Biology and one other science )</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y</td>
+                <td class = "link">  <a href="https://www.plymouth.ac.uk/courses/undergraduate/bmbs-bachelor-of-medicine-bachelor-of-surgery">https://www.plymouth.ac.uk/courses/undergraduate/bmbs-bachelor-of-medicine-bachelor-of-surgery</a></td>
+                <td class = "link"><a href="https://www.plymouth.ac.uk/courses/undergraduate/bmbs-bachelor-of-medicine-bachelor-of-surgery-with-foundation-year-0">https://www.plymouth.ac.uk/courses/undergraduate/bmbs-bachelor-of-medicine-bachelor-of-surgery-with-foundation-year-0</a></td>
             </tr>
             <tr id = 'StAndrews' data-agrade = "5678" data-wpagrade = "" data-alevel = "chem" data-mathsgcse = "5" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "5" data-englishgcseWP="100"  data-doublescience = "55" data-doublescienceWP = "100" data-biologygcse = "5" data-biologygcseWP = "100" data-chemgcse = "5" data-chemgcseWP = "100" data-physicsgcse = "5" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of St Andrews</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 5, <br> 5 x Grade 7</td>
@@ -485,8 +543,11 @@
                 <td class = 'gatealevel'>BBBB (Scottish Highers )</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.st-andrews.ac.uk/subjects/medicine/medicine-bsc-a100/">https://www.st-andrews.ac.uk/subjects/medicine/medicine-bsc-a100/</a></td>
+                <td class = "link"><a href="https://www.st-andrews.ac.uk/subjects/medicine/gateway-to-medicine/">https://www.st-andrews.ac.uk/subjects/medicine/gateway-to-medicine/</a></td>
             </tr>
             <tr id = 'Oxford' data-agrade = "678" data-wpagrade = "" data-alevel = "oxford" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Oxford</td>
                 <td class = 'tabcourse'>Traditional</td>
                 <td class = 'tabgcse'>Number and proportion of 8/9 measured and compared to school performance</td>
@@ -495,8 +556,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.ox.ac.uk/admissions/undergraduate/courses-listing/medicine">https://www.ox.ac.uk/admissions/undergraduate/courses-listing/medicine</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Nottingham' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "7" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "6" data-physicsgcseWP = "6">
+                <td></td>
                 <td>University of Nottingham</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'>English & Maths OR Physics Grade 6, <br> Grade 7 in Science, <br> 6 x Grade 7</td>
@@ -505,8 +569,11 @@
                 <td class = 'gatealevel'>BBC (Incl. Chemistry and Biology)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (AAB)</td>
+                <td class = "link">  <a href="https://www.nottingham.ac.uk/ugstudy/course/Medicine-BMedSci+and+BMBS">https://www.nottingham.ac.uk/ugstudy/course/Medicine-BMedSci+and+BMBS</a></td>
+                <td class = "link"><a href="https://www.nottingham.ac.uk/ugstudy/course/Medicine-with-a-Foundation-Year-BMedSci+and+BMBS">https://www.nottingham.ac.uk/ugstudy/course/Medicine-with-a-Foundation-Year-BMedSci+and+BMBS</a></td>
             </tr>
             <tr id = 'Newcastle' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "any" data-mathsgcse = "0" data-numbest = "6"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Newcastle</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'>No requirements</td>
@@ -515,8 +582,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (BBB) </td>
+                <td class = "link">  <a href="https://www.ncl.ac.uk/undergraduate/degrees/a100/#courseoverview">https://www.ncl.ac.uk/undergraduate/degrees/a100/#courseoverview</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Manchester' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "core" data-mathsgcse = "0" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Manchester</td>
                 <td class = 'tabcourse'>PBL</td>
                 <td class = 'tabgcse'>7 x Grade 7</td>
@@ -525,8 +595,11 @@
                 <td class = 'gatealevel'>n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.manchester.ac.uk/study/undergraduate/courses/2020/01428/mbchb-medicine/entry-requirements/#course-profile">https://www.manchester.ac.uk/study/undergraduate/courses/2020/01428/mbchb-medicine/entry-requirements/#course-profile</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Liverpool' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Liverpool</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 15 points based on university scoring criteria</td>
@@ -535,8 +608,11 @@
                 <td class = 'gatealevel'> (Not for School Leavers) 2:1 Degree</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.liverpool.ac.uk/study/undergraduate/courses/medicine-and-surgery-mbchb/entry-requirements/">https://www.liverpool.ac.uk/study/undergraduate/courses/medicine-and-surgery-mbchb/entry-requirements/</a></td>
+                <td class = "link"><a href="https://www.liverpool.ac.uk/study/undergraduate/courses/foundation-to-health-studies-year-0/overview/">https://www.liverpool.ac.uk/study/undergraduate/courses/foundation-to-health-studies-year-0/overview/</a></td>
             </tr>
             <tr id = 'Leicester' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "either" data-mathsgcse = "6" data-numbest = "7"  data-bestgcse = "7" data-mathsgcseWP = "5" data-mathsgcseWP = "5" data-englishgcse = "6" data-englishgcseWP="5"  data-doublescience = "66" data-doublescienceWP = "55" data-biologygcse = "6" data-biologygcseWP = "5" data-chemgcse = "6" data-chemgcseWP = "5" data-physicsgcse = "6" data-physicsgcseWP = "5">
+                <td></td>
                 <td>University of Leicester</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
@@ -545,8 +621,11 @@
                 <td class = 'gatealevel'> BBB (Incl. Chemistry OR Biology and one other science)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://le.ac.uk/medicine">https://le.ac.uk/medicine</a></td>
+                <td class = "link"><a href="https://le.ac.uk/medicine/study/foundation-year">https://le.ac.uk/medicine/study/foundation-year</a></td>
             </tr>
             <tr id = 'Leeds' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "leeds" data-mathsgcse = "5" data-numbest = "6"  data-bestgcse = "5" data-mathsgcseWP = "4" data-englishgcse = "5" data-englishgcseWP="4"  data-doublescience = "55" data-doublescienceWP = "44" data-biologygcse = "5" data-biologygcseWP = "4" data-chemgcse = "5" data-chemgcseWP = "4" data-physicsgcse = "5" data-physicsgcseWP = "4">
+                <td></td>
                 <td>University of Leeds</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 5 </td>
@@ -555,8 +634,11 @@
                 <td class = 'gatealevel'> BBC (Incl. Chemistry OR Biology and one other science incl. Maths if no Chemistry A-Level)</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>Y <br> (ABB) </td>
+                <td class = "link">  <a href="https://courses.leeds.ac.uk/5580/medicine-and-surgery-mbchb">https://courses.leeds.ac.uk/5580/medicine-and-surgery-mbchb</a></td>
+                <td class = "link"><a href="https://courses.leeds.ac.uk/i900/gateway-year-to-medicine-mbchb">https://courses.leeds.ac.uk/i900/gateway-year-to-medicine-mbchb</a></td>
             </tr>
             <tr id = 'Lancaster' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "lancaster" data-mathsgcse = "5" data-numbest = "6"  data-bestgcse = "5" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "66" data-doublescienceWP = "66" data-biologygcse = "6" data-biologygcseWP = "6" data-chemgcse = "6" data-chemgcseWP = "6" data-physicsgcse = "6" data-physicsgcseWP = "6">
+                <td></td>
                 <td>Lancaster University</td>
                 <td class = 'tabcourse'>PBL</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
@@ -565,8 +647,11 @@
                 <td class = 'gatealevel'> ABB (Incl. Chemistry and Biology)</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>Y <br> (ABB) </td>
+                <td class = "link">  <a href="https://www.lancaster.ac.uk/lms/">https://www.lancaster.ac.uk/lms/</a></td>
+                <td class = "link"><a href="https://www.lancaster.ac.uk/study/undergraduate/courses/medicine-with-a-gateway-year-mbchb-a104/">https://www.lancaster.ac.uk/study/undergraduate/courses/medicine-with-a-gateway-year-mbchb-a104/</a></td>
             </tr>
             <tr id = 'Keele' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "keele" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "5" data-englishgcse = "6" data-englishgcseWP="5"  data-doublescience = "66" data-doublescienceWP = "55" data-biologygcse = "6" data-biologygcseWP = "5" data-chemgcse = "6" data-chemgcseWP = "5" data-physicsgcse = "6" data-physicsgcseWP = "5">
+                <td></td>
                 <td>Keele University</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6, <br> 5 x Grade 7</td>
@@ -575,8 +660,11 @@
                 <td class = 'gatealevel'> BBC (Incl. Chemistry OR Biology)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/medicine/">https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/medicine/</a></td>
+                <td class = "link"><a href="https://www.keele.ac.uk/medicine/undergraduate/healthfoundationyear/">https://www.keele.ac.uk/medicine/undergraduate/healthfoundationyear/</a></td>
             </tr>
             <tr id = 'Imperial' data-agrade = "678" data-wpagrade = "5678" data-alevel = "both" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Imperial College London</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English Grade 6</td>
@@ -585,8 +673,11 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>Y <br> (AAA)</td>
+                <td class = "link">  <a href="https://www.imperial.ac.uk/study/ug/courses/school-of-medicine/medicine/">https://www.imperial.ac.uk/study/ug/courses/school-of-medicine/medicine/</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Glasgow' data-agrade = "5678" data-wpagrade = "" data-alevel = "chem" data-mathsgcse = "0" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "5" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Glasgow</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English Grade 6</td>
@@ -595,8 +686,11 @@
                 <td class = 'gatealevel'> AABB (Scottish Highers) </td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.gla.ac.uk/schools/medicine/">https://www.gla.ac.uk/schools/medicine/</a></td>
+                <td class = "link"><a href="https://www.gla.ac.uk/schools/medicine/mus/admissions/glasgowaccessprogrammegap/">https://www.gla.ac.uk/schools/medicine/mus/admissions/glasgowaccessprogrammegap/</a></td>
             </tr>
             <tr id = 'Exeter' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "4" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "4" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "00" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Exeter</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English & Maths Grade 4</td>
@@ -605,8 +699,11 @@
                 <td class = 'gatealevel'> n/a </td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y  <br> (AAB) </td>
+                <td class = "link">  <a href="https://www.exeter.ac.uk/undergraduate/courses/medicine/medicine/">https://www.exeter.ac.uk/undergraduate/courses/medicine/medicine/</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Edinburgh' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Edinburgh</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths, Biology & Chemistry Grade 6</td>
@@ -615,8 +712,11 @@
                 <td class = 'gatealevel'> n/a </td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (AAB) </td>
+                <td class = "link">  <a href="https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&code=A100">https://www.ed.ac.uk/studying/undergraduate/degrees/index.php?action=programme&code=A100</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'UEA' data-agrade = "5678" data-wpagrade = "2345678" data-alevel = "either" data-mathsgcse = "7" data-numbest = "6"  data-bestgcse = "6" data-mathsgcseWP = "6" data-englishgcse = "6" data-englishgcseWP="6"  data-doublescience = "77" data-doublescienceWP = "66" data-biologygcse = "0" data-biologygcseWP = "6" data-chemgcse = "7" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "6">
+                <td></td>
                 <td>University of East Anglia</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English Grade 6, Maths & Chemistry Grade 7, <br> 6 x Grade 7</td>
@@ -625,8 +725,11 @@
                 <td class = 'gatealevel'> BBB OR ABC </td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www2.uea.ac.uk/study/Undergraduate/degree/detail/mbbs-medicine">https://www2.uea.ac.uk/study/Undergraduate/degree/detail/mbbs-medicine</a></td>
+                <td class = "link"><a href="https://www2.uea.ac.uk/study/undergraduate/degree/detail/mbbs-medicine-mbbs-with-a-gateway-year">https://www2.uea.ac.uk/study/undergraduate/degree/detail/mbbs-medicine-mbbs-with-a-gateway-year</a></td>
             </tr>
             <tr id = 'Dundee' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "core" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "0" data-englishgcse = "6" data-englishgcseWP="0"  data-doublescience = "66" data-doublescienceWP = "0" data-biologygcse = "6" data-biologygcseWP = "0" data-chemgcse = "6" data-chemgcseWP = "0" data-physicsgcse = "6" data-physicsgcseWP = "0">
+                <td></td>
                 <td>University of Dundee</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
@@ -635,8 +738,11 @@
                 <td class = 'gatealevel'> BBC (Incl. Chemistry and one other science) OR AAA (without 2 sciences or chemistry) </td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.dundee.ac.uk/undergraduate/medicine">https://www.dundee.ac.uk/undergraduate/medicine</a></td>
+                <td class = "link"><a href="https://www.dundee.ac.uk/undergraduate/medicine-gateway">https://www.dundee.ac.uk/undergraduate/medicine-gateway</a></td>
             </tr>
             <tr id = 'Cambridge' data-agrade = "78" data-wpagrade = "12345678" data-alevel = "core" data-mathsgcse = "0" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "0" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Cambridge</td>
                 <td class = 'tabcourse'>Traditional</td>
                 <td class = 'tabgcse'> n/a</td>
@@ -645,8 +751,11 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>N</td>
+                <td class = "link">  <a href="https://www.undergraduate.study.cam.ac.uk/courses/medicine">https://www.undergraduate.study.cam.ac.uk/courses/medicine</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Bristol' data-agrade = "5678" data-wpagrade = "12345678" data-alevel = "chem" data-mathsgcse = "7" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "4" data-englishgcse = "4" data-englishgcseWP="4"  data-doublescience = "00" data-doublescienceWP = "66" data-biologygcse = "0" data-biologygcseWP = "6" data-chemgcse = "0" data-chemgcseWP = "6" data-physicsgcse = "0" data-physicsgcseWP = "6">
+                <td></td>
                 <td>University of Bristol</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English Grade 4, Maths Grade 7</td>
@@ -655,8 +764,11 @@
                 <td class = 'gatealevel'> BBC (B in Biology or Chemistry)</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB OR AAC)</td>
+                <td class = "link">  <a href="http://www.bristol.ac.uk/study/undergraduate/2021/medicine/mb-medicine/">http://www.bristol.ac.uk/study/undergraduate/2021/medicine/mb-medicine/</a></td>
+                <td class = "link"><a href="http://www.bristol.ac.uk/study/undergraduate/2020/medicine/mb-chb-gateway-to-medicine/">http://www.bristol.ac.uk/study/undergraduate/2020/medicine/mb-chb-gateway-to-medicine/</a></td>
             </tr>
             <tr id = 'BSMS' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "00" data-doublescienceWP = "100" data-biologygcse = "0" data-biologygcseWP = "100" data-chemgcse = "0" data-chemgcseWP = "100" data-physicsgcse = "0" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Brighton & Sussex Medical School</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English & Maths Grade 6</td>
@@ -665,8 +777,11 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>BMAT</td>
                 <td class = 'tabWP'>Y <br> (AAB)</td>
+                <td class = "link">  <a href="https://www.bsms.ac.uk/index.aspx">https://www.bsms.ac.uk/index.aspx</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Birmingham' data-agrade = "5678" data-wpagrade = "345678" data-alevel = "both" data-mathsgcse = "6" data-numbest = ""  data-bestgcse = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Birmingham</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths & Science Grade 6</td>
@@ -675,8 +790,11 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (ABB)</td>
+                <td class = "link">  <a href="https://www.birmingham.ac.uk/undergraduate/courses/med/medicine.aspx">https://www.birmingham.ac.uk/undergraduate/courses/med/medicine.aspx</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Aston' data-agrade = "45678" data-wpagrade = "45678" data-alevel = "both" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>Aston University</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English, Maths and Science Grade 6, <br> 5 x Grade 6</td>
@@ -685,8 +803,11 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (AAA- AAB)</td>
+                <td class = "link">  <a href="https://www.aston.ac.uk/study/courses/medicine-mbchb">https://www.aston.ac.uk/study/courses/medicine-mbchb</a></td>
+                <td>n/a</td>
             </tr>
             <tr id = 'Aberdeen' data-agrade = "5678" data-wpagrade = "45678" data-alevel = "chem" data-mathsgcse = "6" data-numbest = "5"  data-bestgcse = "6" data-mathsgcseWP = "6" data-mathsgcseWP = "100" data-englishgcse = "6" data-englishgcseWP="100"  data-doublescience = "66" data-doublescienceWP = "100" data-biologygcse = "6" data-biologygcseWP = "100" data-chemgcse = "6" data-chemgcseWP = "100" data-physicsgcse = "6" data-physicsgcseWP = "100">
+                <td></td>
                 <td>University of Aberdeen</td>
                 <td class = 'tabcourse'>Integrated</td>
                 <td class = 'tabgcse'> English & Maths Grade 6 <br> <em>A Combination of Grades 6-9</em></td>
@@ -695,17 +816,14 @@
                 <td class = 'gatealevel'> n/a</td>
                 <td class = 'tabtest'>UCAT</td>
                 <td class = 'tabWP'>Y <br> (AABB SQA)</td>
+                <td class = "link">  <a href="https://www.abdn.ac.uk/smmsn/undergraduate/medicine/">https://www.abdn.ac.uk/smmsn/undergraduate/medicine/</a></td>
+                <td class = "link"><a href="https://www.abdn.ac.uk/smmsn/undergraduate/g2m/index.php">https://www.abdn.ac.uk/smmsn/undergraduate/g2m/index.php</a></td>
             </tr>
-            
             
         </tbody>
     </table>
     <br> <br> <br>
-    <!--
-    <div id = "all">
-        <input type = "button" Value = "Display All">
-    </div>
-    -->
+    
 </div>
 <div id="myModal" class="modal">
     <!-- Modal content -->
@@ -722,7 +840,10 @@
 
 
 <!-- What next  --> 
-    
+
+
+</body>
+<footer>
     <div id = "next">
         <p> We try to keep this information as accurate as possible but for the most accurate and up to date information,
         we advise you to verify all the information directly with university sources.</p>
@@ -730,9 +851,6 @@
 
         <p>All the best with your applications!</p>
     </div>
-
-</body>
-<footer>
     <script src="index.js"></script>
 </footer>
 </html>
