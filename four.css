@@ -55,7 +55,7 @@
 
 .heading {
     grid-area: heading;
-    background-color:olive;
+    background-color: red;
     color: white;  
     text-align: center;  
     font-weight: 200;
