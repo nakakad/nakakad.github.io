@@ -13,7 +13,7 @@
     "userdata"
     "tab"
     "next";
-    grid-template-rows: 8% 9% 55% 36% 5%;
+    grid-template-rows: 8% 14% 55% 36% 5%;
     height: 100%;
     width: 100%;
     min-width: 800px; 
@@ -55,7 +55,7 @@
 
 .heading {
     grid-area: heading;
-    background-color: red;
+    background-color:olive;
     color: white;  
     text-align: center;  
     font-weight: 200;
