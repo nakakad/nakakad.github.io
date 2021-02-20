@@ -8,12 +8,13 @@
 .container {
     display: grid;
     grid-template-areas: 
+    "logo"
     "heading"
     "disclaimer"
     "userdata"
     "tab"
     "next";
-    grid-template-rows: 8% 14% 55% 36% 5%;
+    grid-template-rows: 10% 4% 14% 55% 36% 5%;
     height: 100%;
     width: 100%;
     min-width: 800px; 
@@ -21,6 +22,11 @@
     padding: 10px;
   }
 
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;      
+}
 #userdata {grid-area: userdata;
     padding-left: 5%;
     padding-right: 10%;
@@ -53,7 +59,7 @@
     }
     
 
-.heading {
+.heading{
     grid-area: heading;
     background-color:olive;
     color: white;  
