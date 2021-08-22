@@ -1,0 +1,369 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+/* Cover */
+#cover{
+    position: absolute;
+    z-index: 5;
+    width: 85%;
+    
+}
+#cover img{
+    position:absolute;
+    opacity: 0.6;
+    width: 100%;
+    height: auto;
+}
+#cover-content{
+    position:absolute;
+    z-index:6;
+    width: 80%;
+    height:80%;
+    background-color: white;
+    letter-spacing: 0.1rem;
+}
+#cover-content .disclaimer, #cover-content .wpinfo {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+
+}
+#start-button{
+    font-size: 2rem;
+    font-weight:bold;
+    border: black solid 0.1rem;
+    border-radius: 0.5rem;
+    background: none;
+}
+
+/*Define the Grid */
+/*
+#container{
+    display:grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 14% 13% 48% 20% 5%  ;
+    grid-template-columns: 100%;
+    grid-template-areas: "opening" 
+                        "intro" 
+                        "userdata" 
+                        "tabl" 
+                        "next";
+    min-height: 200rem;
+}
+*/
+
+#container{
+    display:grid;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-areas: "opening" 
+                        "intro" 
+                        "userdata" 
+                        "tabl" 
+                        "next";
+}
+#opening{
+    grid-area: opening;
+    width:100%;
+    background-color: rgb(226, 245, 234);
+
+}
+
+#intro{
+    grid-area: intro;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    background-color: rgb(226, 245, 234);
+}
+
+#userdata{
+    grid-area: userdata;
+    background-color:rgb(226, 245, 234) ;
+}
+
+/* Form Subgrid */
+
+#form{
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "GCSE" 
+                        "A-level" 
+                        "AdmissionTests" 
+                        "Course" 
+                        "WP"
+                        "submit";
+}
+
+#GCSE{
+    grid-area: GCSE;
+    width: 100%;
+}
+
+#ALevels{
+    grid-area: A-level;
+    width: 100%;
+}
+#AdmissionTests{
+    grid-area: AdmissionTests;
+}
+#Course{
+    grid-area: Course;
+}
+#WP{
+    grid-area: WP;
+}
+#submit{
+    grid-area: submit;
+    align-self: center;
+    justify-self: center;
+    margin: 2rem;
+}
+
+#tab{
+    grid-area: tabl;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#next{
+    grid-area: next;
+    background-color: darkslategray;
+    width: 70%;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1rem;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Heading */
+
+
+#img-wrapper{
+    background-color: white;
+}
+
+#opening .logo{
+    width: 20rem;
+    height: auto;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+
+#heading{
+    background-color: darkslategray;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    padding: 3rem;
+}
+
+/* Intro */
+
+.disclaimer, .wpinfo, #form{
+    background-color: white;
+    width: 80%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disclaimer{
+    padding-top: 2rem;
+}
+
+/* Form Styling */
+
+/*GCSE and A Level */
+
+#GCSE h2, #a-level-heading{
+    padding: 2rem;
+}
+#GCSE, #ALevels {
+    color: darkslategray;
+}
+
+.selection, .a-level-selection {
+    width: 90%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.choices{
+    width: 100%;
+}
+
+.choice, .a-level-choice{
+    display:none;
+}
+.chosen{
+    background-color:rgb(226, 245, 234);
+    letter-spacing: 0.1rem;
+    width: 90%;
+    padding: 1.5rem;
+    height: 5.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+
+}
+
+.chosen label {
+    display: block;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+select {
+    width: 80%;
+    height: 3rem;
+    border-radius: 0.2rem;
+}
+
+.choice select{
+    width: 55%;
+
+}
+.chosen button {
+    background-color:rgb(226, 245, 234);
+    color:  darkslategray;
+    font-size: 1rem;
+    border: none;
+    position: relative;
+    left: 10rem;
+    bottom: 2.5rem;
+    
+
+}
+
+#original{
+    display:hidden;
+}
+
+/* Course Type, Admission Tests and WP*/
+#Course, #WP, #AdmissionTests{
+    background-color: rgb(226, 245, 234);
+    letter-spacing: 0.1rem;
+    width: 90%;
+    padding: 1rem;
+    height: 5.5rem;
+    margin-top: 2rem;
+    color:  darkslategray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/* Submit Button */
+#submit input{
+    background-color: darkslategray;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Tooltip */
+.float{
+    display:inline;
+}
+.tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 30rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+
+}
+
+/*modal*/
+.info-button{
+    border-bottom: 1px dotted black;
+}
+.modal{
+    display: none;
+    width: 50rem;
+    background-color: black;
+    color:white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2rem;
+    position: fixed;
+    top: 40%;
+    right:20%;
+
+}
+
+.escape{
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Table*/
+td{
+    text-align: center;
+}
+
+.extra{
+    border: none !important;
+}
+
+.fit{
+    background-color: green !important;
+}
+
+#tab select {
+    height: 2rem;
+    width: 100%;
+}
+
+
+td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('https://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+}
+
+td.sorting_1 {
+    background-color: darkslategray !important;
+    color: white;
+}
